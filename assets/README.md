@@ -1,10 +1,13 @@
 # Project media provenance
 
-- `tank-duel-best-agent.mp4`: unchanged recording from Tank Duel's
-  `videos/dodging_hard_20261009.mp4`. The project handoff identifies this as the
-  latest selected forecast206 agent. Scenario: hard `open_fire`, seed 7530001,
-  three shots, green wins, no self-hit. The recording plays at 0.5× simulation
-  speed; it contains no audio. `tank-duel-poster.png` is its frame at 1 second.
+- `tank-duel-corner-duel.mp4`: genuine seeded maze match recorded from the
+  latest `models/play_agent.zip` (forecast206) against
+  `models/play_agent_before_dodging_20261009.zip`. Source:
+  `videos/website_corner_duel_20261010.mp4`; seed 8150025, 487 simulation ticks,
+  three shots from each agent, green wins with no self-hit. Both agents start
+  with a wall blocking their direct line of sight. Selected for illustration
+  from 16 seeded matches, not a representative performance sample.
+  Silent, 0.5× simulation speed. Poster is the frame at 1 second.
 - Tank benchmark figures are from `runs/dodging_20261009/report.json`, summarized
   in the project's `README_TACTICAL.md`: 224/300 wins against hard shooters and
   zero self-hits across the 1,600-game final suite. These are fixed-map results.

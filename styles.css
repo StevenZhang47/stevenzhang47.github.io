@@ -305,16 +305,26 @@ img { display: block; max-width: 100%; }
 .bar-probe { background: #91a7a4; }
 .bar-finetune { background: var(--accent); }
 .chart-scale { color: var(--muted); font-size: 10px; margin-top: 10px; }
-.teaching-section { display: grid; grid-template-columns: 180px 1fr; gap: 42px; }
-.lesson-flow { padding: 0; margin: 28px 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; list-style: none; }
-.lesson-flow li { border-top: 2px solid #d9e2dc; padding-top: 12px; }
-.lesson-flow span { color: var(--rust); font-size: 11px; }
-.lesson-flow strong { display: block; font-size: 13px; font-weight: 500; margin-top: 10px; }
-.lesson-flow small { display: block; color: var(--muted); font-size: 11px; line-height: 1.5; margin-top: 5px; }
+.teaching-section > .section-kicker { margin-bottom: 24px; }
+.teaching-card { display: grid; grid-template-columns: 1.2fr 1fr; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.teaching-content { padding: 30px; }
+.teaching-content h2 { font-size: clamp(25px, 3vw, 31px); }
+.course-details { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 20px 0 0; list-style: none; }
+.course-details li { font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 3px; padding: 5px 8px; }
+.teaching-outline { padding: 30px; background: #f5f7f4; border-left: 1px solid var(--line); }
+.outline-label { display: flex; justify-content: space-between; gap: 12px; margin: 0 0 18px; font-size: 12px; font-weight: 600; }
+.outline-label span { color: var(--muted); font-weight: 400; }
+.lesson-flow { padding: 0; margin: 0; list-style: none; }
+.lesson-flow li { display: flex; gap: 16px; padding: 13px 0; border-top: 1px solid #d9e2dc; }
+.lesson-flow span { color: var(--rust); font-size: 11px; padding-top: 2px; }
+.lesson-flow strong { display: block; font-size: 13px; font-weight: 500; }
+.lesson-flow small { display: block; color: var(--muted); font-size: 11px; line-height: 1.5; margin-top: 4px; }
 @media (max-width: 780px) {
-  .project-feature, .teaching-section { grid-template-columns: 1fr; gap: 25px; }
+  .project-feature { grid-template-columns: 1fr; gap: 25px; }
   .project-feature + .project-feature { padding-top: 34px; }
   .feature-copy { max-width: 650px; }
-  .lesson-flow { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .teaching-card { grid-template-columns: 1fr; }
+  .teaching-content, .teaching-outline { padding: 24px; }
+  .teaching-outline { border-left: 0; border-top: 1px solid var(--line); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

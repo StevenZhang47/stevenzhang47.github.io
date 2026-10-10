@@ -92,7 +92,7 @@
             <p>I built a tank-combat environment and trained a neural agent to navigate, aim,
               dodge, and fire around ricocheting bullets. Demonstrations initialize the policy;
               PPO refines it, with physics-based safety masks to reduce self-hits.</p>
-            <p>The green tank is the latest selected agent, facing a hard scripted shooter.
+            <p>The green tank is the latest selected agent, facing an earlier trained agent in a maze.
               This is a recorded match, played at half speed.</p>
             <dl class="project-stats">
               <div><dt>74.7%</dt><dd>Wins against hard shooters<br>224 of 300 test games</dd></div>
@@ -105,12 +105,12 @@
           </div>
           <figure class="project-media tank-media">
             <video id="tank-demo" autoplay muted loop playsinline controls preload="metadata"
-              poster="assets/tank-duel-poster.png" width="960" height="770" aria-describedby="tank-caption">
-              <source src="assets/tank-duel-best-agent.mp4" type="video/mp4">
-              Your browser does not support embedded video. <a href="assets/tank-duel-best-agent.mp4">Watch the Tank Duel recording.</a>
+              poster="assets/tank-duel-corner-poster.png" width="960" height="770" aria-describedby="tank-caption">
+              <source src="assets/tank-duel-corner-duel.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="assets/tank-duel-corner-duel.mp4">Watch the Tank Duel recording.</a>
             </video>
-            <figcaption id="tank-caption"><span class="status-dot" aria-hidden="true"></span>Green: trained agent · Red: scripted opponent · Silent, looping replay</figcaption>
-            <p class="media-description">The green agent moves into firing position, fires three shots, and wins the round without a self-hit. Use the video controls to pause or replay.</p>
+            <figcaption id="tank-caption"><span class="status-dot" aria-hidden="true"></span>Green: trained agent · Red: earlier trained agent · Silent, looping replay</figcaption>
+            <p class="media-description">Starting on opposite sides of a wall, both agents move toward an opening and exchange fire. Each fires three shots; green wins without a self-hit. Use the video controls to pause or replay.</p>
           </figure>
         </article>
 
@@ -142,24 +142,27 @@
 
       <section id="teaching" class="shell section-block rule-top teaching-section" aria-labelledby="teaching-title">
         <p class="section-kicker">Teaching</p>
-        <div class="teaching-content">
-          <p class="card-meta">Splash at Yale · E5492 · 2026</p>
-          <h2 id="teaching-title">Can a Computer Taste?</h2>
-          <p class="teaching-subtitle">Machine Learning Through Food</p>
-          <p>A hands-on introduction to machine learning for students in grades 6–12.
-            Working in pairs, students taste foods, rate sweetness, saltiness, sourness, and enjoyment,
-            and turn their own responses into a dataset.</p>
-          <p>The lesson moves from guessing model weights to fitting linear regression, testing on
-            wasabi peas, and building a small neural network in Google Colab. Students ask whether
-            seeing some wasabi examples helps a model predict the responses kept aside for testing.</p>
-          <ol class="lesson-flow" aria-label="Lesson sequence">
-            <li><span>01</span><strong>Taste &amp; rate</strong><small>Collect the examples</small></li>
-            <li><span>02</span><strong>Guess &amp; train</strong><small>Learn the weights</small></li>
-            <li><span>03</span><strong>Reserve &amp; test</strong><small>Check unseen answers</small></li>
-            <li><span>04</span><strong>Build &amp; compare</strong><small>Try a neural network</small></li>
-          </ol>
-          <div class="project-links"><a href="https://github.com/StevenZhang47/-Splash-2026-Class-Can-a-Computer-Taste-" target="_blank" rel="noreferrer">Class notebook &amp; materials <span aria-hidden="true">↗</span></a></div>
-        </div>
+        <article class="teaching-card">
+          <div class="teaching-content">
+            <p class="card-meta">Splash at Yale · 2026</p>
+            <h2 id="teaching-title">Can a Computer Taste?</h2>
+            <p class="teaching-subtitle">Machine Learning Through Food</p>
+            <p>Students turn their own taste ratings into a dataset, then train models to predict enjoyment—from linear regression to a small neural network.</p>
+            <ul class="course-details" aria-label="Class details">
+              <li>60 minutes</li><li>Grades 6–12</li><li>Pair programming</li>
+            </ul>
+            <div class="project-links"><a href="https://github.com/StevenZhang47/-Splash-2026-Class-Can-a-Computer-Taste-" target="_blank" rel="noreferrer">Class notebook &amp; materials <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="teaching-outline">
+            <p class="outline-label">Inside the class <span>E5492</span></p>
+            <ol class="lesson-flow" aria-label="Lesson sequence">
+              <li><span>01</span><div><strong>Taste &amp; rate</strong><small>Build a dataset from real responses.</small></div></li>
+              <li><span>02</span><div><strong>Guess &amp; train</strong><small>Compare your weights with linear regression.</small></div></li>
+              <li><span>03</span><div><strong>Reserve &amp; test</strong><small>Try wasabi peas and check unseen answers.</small></div></li>
+              <li><span>04</span><div><strong>Build &amp; compare</strong><small>Code a small neural network in Colab.</small></div></li>
+            </ol>
+          </div>
+        </article>
       </section>
 
       <section class="shell section-block rule-top project-preview">

@@ -93,7 +93,7 @@
               dodge, and fire around ricocheting bullets. Demonstrations initialize the policy;
               PPO refines it, with physics-based safety masks to reduce self-hits.</p>
             <p>The green tank is the latest selected agent, facing an earlier trained agent in a maze.
-              This is a recorded match, played at half speed.</p>
+              This is a recorded match, played at normal speed (1×).</p>
             <dl class="project-stats">
               <div><dt>74.7%</dt><dd>Wins against hard shooters<br>224 of 300 test games</dd></div>
               <div><dt>0 / 1,600</dt><dd>Observed self-hits<br>Across the final test suites</dd></div>
@@ -105,9 +105,9 @@
           </div>
           <figure class="project-media tank-media">
             <video id="tank-demo" autoplay muted loop playsinline controls preload="metadata"
-              poster="assets/tank-duel-corner-poster.png" width="960" height="770" aria-describedby="tank-caption">
-              <source src="assets/tank-duel-corner-duel.mp4" type="video/mp4">
-              Your browser does not support embedded video. <a href="assets/tank-duel-corner-duel.mp4">Watch the Tank Duel recording.</a>
+              poster="assets/tank-duel-corner-poster-1x.png" width="960" height="770" aria-describedby="tank-caption">
+              <source src="assets/tank-duel-corner-duel-1x.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="assets/tank-duel-corner-duel-1x.mp4">Watch the Tank Duel recording.</a>
             </video>
             <figcaption id="tank-caption"><span class="status-dot" aria-hidden="true"></span>Green: trained agent · Red: earlier trained agent · Silent, looping replay</figcaption>
             <p class="media-description">Starting on opposite sides of a wall, both agents move toward an opening and exchange fire. Each fires three shots; green wins without a self-hit. Use the video controls to pause or replay.</p>

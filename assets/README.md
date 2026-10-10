@@ -1,13 +1,15 @@
 # Project media provenance
 
-- `tank-duel-corner-duel.mp4`: genuine seeded maze match recorded from the
+- `tank-duel-corner-duel-1x.mp4`: genuine seeded maze match recorded from the
   latest `models/play_agent.zip` (forecast206) against
   `models/play_agent_before_dodging_20261009.zip`. Source:
-  `videos/website_corner_duel_20261010.mp4`; seed 8150025, 487 simulation ticks,
+  same seeded match as `videos/website_corner_duel_20261010.mp4`, re-rendered
+  at 30 fps with one frame per four 120 Hz simulation ticks; seed 8150025, 487 simulation ticks,
   three shots from each agent, green wins with no self-hit. Both agents start
   with a wall blocking their direct line of sight. Selected for illustration
   from 16 seeded matches, not a representative performance sample.
-  Silent, 0.5× simulation speed. Poster is the frame at 1 second.
+  Silent, 1× simulation speed, with a 1-second opening hold and 2-second ending hold.
+  `tank-duel-corner-poster-1x.png` is the opening frame.
 - Tank benchmark figures are from `runs/dodging_20261009/report.json`, summarized
   in the project's `README_TACTICAL.md`: 224/300 wins against hard shooters and
   zero self-hits across the 1,600-game final suite. These are fixed-map results.

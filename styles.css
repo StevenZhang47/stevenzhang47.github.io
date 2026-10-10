@@ -306,14 +306,15 @@ img { display: block; max-width: 100%; }
 .bar-finetune { background: var(--accent); }
 .chart-scale { color: var(--muted); font-size: 10px; margin-top: 10px; }
 .teaching-section > .section-kicker { margin-bottom: 24px; }
-.teaching-disclosure > summary { display: flex; align-items: center; gap: 16px; padding: 20px 22px; border: 1px solid var(--line); border-radius: 4px; cursor: pointer; list-style: none; font-size: 18px; font-weight: 500; }
+.teaching-disclosure { border: 2px solid #b9c9c3; border-radius: 8px; background: #f8faf7; box-shadow: 0 3px 12px rgb(30 55 45 / 5%); }
+.teaching-disclosure > summary { display: flex; align-items: center; gap: 20px; padding: 28px 30px; border-radius: 6px; cursor: pointer; list-style: none; font-size: 22px; font-weight: 500; }
 .teaching-disclosure > summary::-webkit-details-marker { display: none; }
 .teaching-disclosure > summary:hover { background: #f5f7f4; }
-.teaching-disclosure > summary small { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; font-weight: 400; }
-.teaching-chevron { width: 8px; height: 8px; flex: 0 0 8px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
+.teaching-disclosure > summary small { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; font-weight: 400; }
+.teaching-chevron { width: 10px; height: 10px; flex: 0 0 10px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); transform: rotate(-45deg); }
 .teaching-disclosure[open] > summary .teaching-chevron { transform: rotate(45deg); }
-.teaching-disclosure[open] > summary { border-radius: 4px 4px 0 0; }
-.teaching-disclosure[open] > .teaching-card { border-top: 0; border-radius: 0 0 4px 4px; }
+.teaching-disclosure[open] > summary { border-radius: 6px 6px 0 0; border-bottom: 1px solid #b9c9c3; }
+.teaching-disclosure[open] > .teaching-card { border: 0; border-radius: 0 0 6px 6px; background: white; }
 .teaching-card { display: grid; grid-template-columns: 1.2fr 1fr; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
 .teaching-content { padding: 30px; }
 .teaching-content h2 { font-size: clamp(25px, 3vw, 31px); }

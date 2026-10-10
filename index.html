@@ -13,6 +13,8 @@
       <header class="site-header shell">
         <nav aria-label="Main navigation">
           <a class="active" href="./">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#teaching">Teaching</a>
           <a href="writing.html">Writing</a>
         </nav>
       </header>
@@ -79,8 +81,89 @@
         </div>
       </section>
 
+      <section id="projects" class="shell section-block rule-top featured-projects" aria-labelledby="projects-title">
+        <p class="section-kicker" id="projects-title">Selected projects</p>
+
+        <article class="project-feature" aria-labelledby="tank-title">
+          <div class="feature-copy">
+            <p class="card-meta">Reinforcement learning</p>
+            <h2 id="tank-title">Learning to fight.<br>Learning to survive.</h2>
+            <p class="project-name">Tank Duel</p>
+            <p>I built a tank-combat environment and trained a neural agent to navigate, aim,
+              dodge, and fire around ricocheting bullets. Demonstrations initialize the policy;
+              PPO refines it, with physics-based safety masks to reduce self-hits.</p>
+            <p>The green tank is the latest selected agent, facing a hard scripted shooter.
+              This is a recorded match, played at half speed.</p>
+            <dl class="project-stats">
+              <div><dt>74.7%</dt><dd>Wins against hard shooters<br>224 of 300 test games</dd></div>
+              <div><dt>0 / 1,600</dt><dd>Observed self-hits<br>Across the final test suites</dd></div>
+            </dl>
+            <p class="evidence-note">Fixed-map benchmarks against scripted and frozen neural opponents; not a human win rate or a guarantee of safety.</p>
+            <div class="project-links">
+              <a href="https://github.com/StevenZhang47/tank-duel" target="_blank" rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <figure class="project-media tank-media">
+            <video id="tank-demo" autoplay muted loop playsinline controls preload="metadata"
+              poster="assets/tank-duel-poster.png" width="960" height="770" aria-describedby="tank-caption">
+              <source src="assets/tank-duel-best-agent.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="assets/tank-duel-best-agent.mp4">Watch the Tank Duel recording.</a>
+            </video>
+            <figcaption id="tank-caption"><span class="status-dot" aria-hidden="true"></span>Green: trained agent · Red: scripted opponent · Silent, looping replay</figcaption>
+            <p class="media-description">The green agent moves into firing position, fires three shots, and wins the round without a self-hit. Use the video controls to pause or replay.</p>
+          </figure>
+        </article>
+
+        <article class="project-feature" aria-labelledby="finetuning-title">
+          <div class="feature-copy">
+            <p class="card-meta">Computer vision · Transfer learning</p>
+            <h2 id="finetuning-title">Teaching a foundation model to recognize blood cells.</h2>
+            <p class="project-name">BioMedCLIP × BloodMNIST</p>
+            <p>I compared zero-shot predictions, a classifier trained on frozen image embeddings,
+              and partial fine-tuning of BioMedCLIP. Updating the final visual transformer block,
+              normalization, projection, and classifier improved performance on eight blood-cell classes.</p>
+            <div class="accuracy-chart" role="img" aria-label="Accuracy on the same 3,421 test images: frozen linear probe 88.89 percent; partial fine-tuning 96.99 percent. An improvement of 8.10 percentage points.">
+              <p class="chart-heading">Same test set. More useful representations.</p>
+              <div class="accuracy-row"><div><span>Frozen linear probe</span><strong>88.89%</strong></div><div class="bar-track"><span class="bar-probe" style="width:88.89%"></span></div></div>
+              <div class="accuracy-row"><div><span>Partial fine-tuning</span><strong>96.99%</strong></div><div class="bar-track"><span class="bar-finetune" style="width:96.99%"></span></div></div>
+              <p class="chart-scale">Test accuracy · 0–100% · 3,421 images</p>
+            </div>
+            <p class="evidence-note">Saved results from one completed run. The zero-shot baseline was evaluated on validation data, so it is not included in this test-set comparison.</p>
+            <div class="project-links"><a href="https://github.com/StevenZhang47/FineTuning" target="_blank" rel="noreferrer">Read the experiment <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <figure class="project-media cell-media">
+            <img src="assets/bloodmnist-examples.png" width="1260" height="714" loading="lazy" decoding="async"
+              alt="Eight labeled BloodMNIST training images: basophil, eosinophil, erythroblast, immature granulocyte, lymphocyte, monocyte, neutrophil, and platelet.">
+            <figcaption>One training example from each of the eight classes. These are dataset labels, not model predictions.</figcaption>
+            <p class="media-description">Dataset: <a href="https://medmnist.com/" target="_blank" rel="noreferrer">BloodMNIST / MedMNIST</a>. An image-classification benchmark, not a clinical application.</p>
+          </figure>
+        </article>
+      </section>
+
+      <section id="teaching" class="shell section-block rule-top teaching-section" aria-labelledby="teaching-title">
+        <p class="section-kicker">Teaching</p>
+        <div class="teaching-content">
+          <p class="card-meta">Splash at Yale · E5492 · 2026</p>
+          <h2 id="teaching-title">Can a Computer Taste?</h2>
+          <p class="teaching-subtitle">Machine Learning Through Food</p>
+          <p>A hands-on introduction to machine learning for students in grades 6–12.
+            Working in pairs, students taste foods, rate sweetness, saltiness, sourness, and enjoyment,
+            and turn their own responses into a dataset.</p>
+          <p>The lesson moves from guessing model weights to fitting linear regression, testing on
+            wasabi peas, and building a small neural network in Google Colab. Students ask whether
+            seeing some wasabi examples helps a model predict the responses kept aside for testing.</p>
+          <ol class="lesson-flow" aria-label="Lesson sequence">
+            <li><span>01</span><strong>Taste &amp; rate</strong><small>Collect the examples</small></li>
+            <li><span>02</span><strong>Guess &amp; train</strong><small>Learn the weights</small></li>
+            <li><span>03</span><strong>Reserve &amp; test</strong><small>Check unseen answers</small></li>
+            <li><span>04</span><strong>Build &amp; compare</strong><small>Try a neural network</small></li>
+          </ol>
+          <div class="project-links"><a href="https://github.com/StevenZhang47/-Splash-2026-Class-Can-a-Computer-Taste-" target="_blank" rel="noreferrer">Class notebook &amp; materials <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
       <section class="shell section-block rule-top project-preview">
-        <p class="section-kicker">Projects</p>
+        <p class="section-kicker">More projects</p>
         <div class="project-list">
           <a href="https://github.com/StevenZhang47/Toxicity-Prediction-GNN-" target="_blank" rel="noreferrer">
             <span><strong>Molecular Toxicity GNN</strong><small>Graph attention network on Tox21 molecular data</small></span>
@@ -110,5 +193,6 @@
         <span>Built with curiosity in New Haven.</span>
       </footer>
     </main>
+    <script src="site.js" defer></script>
   </body>
 </html>

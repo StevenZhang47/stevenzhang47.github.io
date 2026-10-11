@@ -31,3 +31,19 @@
 
 The website uses recorded results; it does not run model inference in a visitor's
 browser or claim that the video is a live simulation.
+
+- `colloidal-crystals-surp-poster.pdf`: Steven's selected version 2 poster,
+  copied unchanged from `MLprojects/random/SURPPresentation2.pdf`.
+  `colloidal-crystals-surp-poster.png` is a full-page PDFKit rendering of its
+  single page for the website preview; the original PDF is linked for reading.
+- `colloidal-crystal-simulation.mp4`: rendered directly from
+  `Downloads/trajectory_LS4.5_FP0.33_RN80_BL10_DL5.35_N4000000000.gsd`.
+  All 10,125 particles are retained, with the recorded positions, particle types,
+  relative diameters, and periodic box. Teal and orange distinguish P and N.
+  180 evenly spaced source frames, including both endpoints, are shown at 15 fps,
+  followed by a 2-second final-frame hold. The source contains 4,803 frames and
+  spans timesteps 0 through 2,401,000,000; its filename is not used to infer
+  completed timesteps. This is time-compressed playback, with a fixed camera,
+  and no interpolated particle motion or simulated additional dynamics.
+  The visualization uses spherical point sprites rendered with Three.js.
+  `colloidal-crystal-simulation.png` is the final rendered frame.

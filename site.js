@@ -1,18 +1,17 @@
-// A silent looping replay; native controls always let visitors pause it.
-const tankVideo = document.querySelector('#tank-demo');
-if (tankVideo) {
-  tankVideo.muted = true;
+// Silent project replays; native controls always let visitors pause them.
+document.querySelectorAll('video[autoplay]').forEach((video) => {
+  video.muted = true;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const applyMotionPreference = () => {
-    tankVideo.autoplay = !reducedMotion.matches;
+    video.autoplay = !reducedMotion.matches;
     if (reducedMotion.matches) {
-      tankVideo.pause();
+      video.pause();
     } else {
-      tankVideo.play().catch(() => {
+      video.play().catch(() => {
         // Browser policies may require pressing the native play button.
       });
     }
   };
   applyMotionPreference();
   reducedMotion.addEventListener('change', applyMotionPreference);
-}
+});

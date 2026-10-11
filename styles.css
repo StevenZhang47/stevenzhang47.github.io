@@ -283,9 +283,13 @@ img { display: block; max-width: 100%; }
 .project-media { min-width: 0; margin: 0; }
 .project-media video { display: block; width: 100%; height: auto; background: #e7e9e9; border: 1px solid var(--line); border-radius: 3px; }
 .project-media img { width: 100%; height: auto; }
-.lineage-feature { grid-template-columns: 1fr; gap: 24px; padding-top: 0; }
-.lineage-feature .feature-copy { max-width: 720px; }
-.lineage-image-link { display: block; border: 1px solid var(--line); border-radius: 3px; background: #fff; }
+.research-feature { padding-block: 28px 38px; }
+.research-feature + .research-feature { border-top: 1px solid var(--line); padding-top: 38px; }
+.research-feature:last-child { padding-bottom: 0; }
+.research-overview { max-width: 760px; margin-bottom: 26px; }
+.research-visuals { display: grid; grid-template-columns: 1.05fr 1fr; gap: 28px; align-items: start; }
+.research-image-link, .lineage-image-link { display: block; border: 1px solid var(--line); border-radius: 3px; background: #fff; }
+.research-image-link:hover { border-color: var(--accent); }
 .project-media figcaption, .media-description { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .media-description { font-size: 11px; }
 .media-description a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
@@ -332,6 +336,7 @@ img { display: block; max-width: 100%; }
 .lesson-flow strong { display: block; font-size: 13px; font-weight: 500; }
 .lesson-flow small { display: block; color: var(--muted); font-size: 11px; line-height: 1.5; margin-top: 4px; }
 @media (max-width: 780px) {
+  .research-visuals { grid-template-columns: 1fr; gap: 28px; }
   .project-feature { grid-template-columns: 1fr; gap: 25px; }
   .project-feature + .project-feature { padding-top: 34px; }
   .feature-copy { max-width: 650px; }

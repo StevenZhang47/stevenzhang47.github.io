@@ -13,6 +13,7 @@
       <header class="site-header shell">
         <nav aria-label="Main navigation">
           <a class="active" href="./">Home</a>
+          <a href="#research">Research</a>
           <a href="#projects">Projects</a>
           <a href="#teaching">Teaching</a>
           <a href="writing.html">Writing</a>
@@ -55,30 +56,68 @@
         </div>
       </section>
 
-      <section class="shell section-block rule-top home-research">
+      <section id="research" class="shell section-block rule-top home-research" aria-labelledby="research-title">
         <div class="compact-section-heading">
-          <p class="section-kicker">Research</p>
+          <p id="research-title" class="section-kicker">Research</p>
         </div>
 
-        <div class="work-grid">
-          <article class="work-card">
-            <p class="card-meta">Computational chemistry</p>
-            <h2>Learning structural fingerprints for crystal discovery</h2>
-            <p>
-              Built and evaluated a scalable pipeline for classifying simulated colloidal crystals, matching known
-              structures, and flagging unfamiliar structural families for further investigation.
-            </p>
-          </article>
+        <article id="colloidal-crystals" class="research-feature" aria-labelledby="crystals-title">
+          <div class="feature-copy research-overview">
+            <p class="card-meta">Computational chemistry · Hocky Group, NYU</p>
+            <h2 id="crystals-title">Detecting and identifying colloidal crystals.</h2>
+            <p>I built a pipeline for analyzing molecular-dynamics simulations of colloidal self-assembly.
+              It separates structural domains, identifies known crystal prototypes, and flags unfamiliar
+              structures for further investigation.</p>
+            <div class="project-links">
+              <a href="https://github.com/StevenZhang47/colloid-crystal-pipeline" target="_blank" rel="noreferrer">Code &amp; methods <span aria-hidden="true">↗</span></a>
+              <a href="assets/colloidal-crystals-surp-poster.pdf" target="_blank" rel="noreferrer">Read the SURP poster <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="research-visuals">
+            <figure class="project-media simulation-media">
+              <video id="crystal-demo" autoplay muted loop playsinline controls preload="metadata"
+                poster="assets/colloidal-crystal-simulation.png" width="1120" height="840" aria-describedby="crystal-caption">
+                <source src="assets/colloidal-crystal-simulation.mp4" type="video/mp4">
+                Your browser does not support embedded video. <a href="assets/colloidal-crystal-simulation.mp4">Watch the molecular-dynamics simulation.</a>
+              </video>
+              <figcaption id="crystal-caption">Molecular-dynamics simulation · 10,125 particles · Silent, looping replay</figcaption>
+              <p class="media-description">Time-compressed playback of sampled simulation frames. Colors distinguish
+                the P and N particle types. Use the video controls to pause or replay.</p>
+            </figure>
+            <figure class="project-media poster-media">
+              <a class="research-image-link" href="assets/colloidal-crystals-surp-poster.pdf" target="_blank" rel="noreferrer"
+                aria-label="Open the SURP colloidal-crystal research poster as a PDF in a new tab">
+                <img src="assets/colloidal-crystals-surp-poster.png" width="1800" height="1200" loading="lazy" decoding="async"
+                  alt="Research poster titled A Scalable Framework for Detecting and Identifying Novel Colloidal Crystals, showing the preprocessing, structural descriptors, novelty detector, and prototype matching.">
+              </a>
+              <figcaption>SURP research presentation · Steven Zhang and collaborators</figcaption>
+              <p class="media-description"><a href="assets/colloidal-crystals-surp-poster.pdf" target="_blank" rel="noreferrer">Open the full poster (PDF) ↗</a></p>
+            </figure>
+          </div>
+        </article>
 
-          <article class="work-card">
-            <p class="card-meta">Systems immunology</p>
-            <h2>Modeling immune-cell decisions</h2>
-            <p>
-              Using stochastic simulation and mathematical models to reason about how immune cells integrate signals,
-              proliferate, differentiate, and form memory.
-            </p>
-          </article>
-        </div>
+        <article id="lineage-reconstruction" class="research-feature" aria-labelledby="lineage-title">
+          <div class="feature-copy research-overview">
+            <p class="card-meta">Systems immunology · Kueh Lab, Yale</p>
+            <h2 id="lineage-title">Reconstructing cell lineages from RNA sequencing.</h2>
+            <p>I’m developing a pipeline that takes FASTQ files containing RNA-sequencing data from
+              CRISPR lineage-tracing experiments and reconstructs lineage trees. The goal is to infer
+              relationships between cells from the editing patterns recorded in their sequencing data.</p>
+          </div>
+          <figure class="project-media lineage-media">
+            <a class="lineage-image-link" href="assets/crispr-lineage-tree.png" target="_blank" rel="noreferrer"
+              aria-label="Open the reconstructed lineage tree at full resolution in a new tab">
+              <img src="assets/crispr-lineage-tree.png" width="2587" height="643" loading="lazy" decoding="async"
+                alt="Reconstructed CRISPR lineage tree showing branching relationships among 176 UMIs with 17 allele patterns. Branch labels include edit patterns and UMI counts."
+                aria-describedby="lineage-caption">
+            </a>
+            <figcaption id="lineage-caption">Example reconstruction: 176 unique molecular identifiers (UMIs)
+              across 17 allele patterns. Branch labels show edit patterns and UMI counts.</figcaption>
+            <div class="project-links">
+              <a href="assets/crispr-lineage-tree.png" target="_blank" rel="noreferrer">View the full-resolution tree <span aria-hidden="true">↗</span></a>
+            </div>
+          </figure>
+        </article>
       </section>
 
       <section id="projects" class="shell section-block rule-top featured-projects" aria-labelledby="projects-title">
@@ -136,32 +175,6 @@
               alt="Eight labeled BloodMNIST training images: basophil, eosinophil, erythroblast, immature granulocyte, lymphocyte, monocyte, neutrophil, and platelet.">
             <figcaption>One training example from each of the eight classes. These are dataset labels, not model predictions.</figcaption>
             <p class="media-description">Dataset: <a href="https://medmnist.com/" target="_blank" rel="noreferrer">BloodMNIST / MedMNIST</a>. An image-classification benchmark, not a clinical application.</p>
-          </figure>
-        </article>
-      </section>
-
-      <section id="lineage-reconstruction" class="shell section-block rule-top" aria-labelledby="lineage-title">
-        <article class="project-feature lineage-feature">
-          <div class="feature-copy">
-            <p class="card-meta">Computational biology · Lineage tracing</p>
-            <h2 id="lineage-title">Reconstructing cell lineages from RNA sequencing.</h2>
-            <p class="project-name">CRISPR Lineage Reconstruction</p>
-            <p>A pipeline designed to take FASTQ files containing RNA-sequencing data from
-              CRISPR lineage-tracing experiments and reconstruct lineage trees. The goal is
-              to infer relationships between cells from the editing patterns recorded in their sequencing data.</p>
-          </div>
-          <figure class="project-media lineage-media">
-            <a class="lineage-image-link" href="assets/crispr-lineage-tree.png" target="_blank" rel="noreferrer"
-              aria-label="Open the reconstructed lineage tree at full resolution in a new tab">
-              <img src="assets/crispr-lineage-tree.png" width="2587" height="643" loading="lazy" decoding="async"
-                alt="Reconstructed CRISPR lineage tree showing branching relationships among 176 UMIs with 17 allele patterns. Branch labels include edit patterns and UMI counts."
-                aria-describedby="lineage-caption">
-            </a>
-            <figcaption id="lineage-caption">Example reconstruction: 176 unique molecular identifiers (UMIs)
-              across 17 allele patterns. Branch labels show edit patterns and UMI counts.</figcaption>
-            <div class="project-links">
-              <a href="assets/crispr-lineage-tree.png" target="_blank" rel="noreferrer">View the full-resolution tree <span aria-hidden="true">↗</span></a>
-            </div>
           </figure>
         </article>
       </section>

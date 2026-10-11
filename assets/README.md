@@ -22,6 +22,12 @@
   accuracy) and cell 69 (96.99% partial fine-tuning accuracy), both on 3,421 test
   images. Zero-shot validation accuracy is deliberately not mixed into this
   test-set comparison. Notebook cell indices above are zero-based.
+- `crispr-lineage-tree.png`: supplied by Steven from
+  `MLprojects/random/image (3).png`, copied without image edits. The figure
+  displays an example lineage reconstruction with 176 UMIs and 17 allele
+  patterns. These counts describe the pictured example, not an accuracy
+  benchmark. The project purpose supplied by Steven is a pipeline from FASTQ
+  RNA-sequencing files from CRISPR lineage-tracing experiments to lineage trees.
 
 The website uses recorded results; it does not run model inference in a visitor's
 browser or claim that the video is a live simulation.

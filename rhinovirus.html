@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An exploratory analysis of Boston pooled-swab data: what broad rhinovirus labels hide, and how genetic detail changes comparisons between locations.">
+    <title>What rhinovirus labels hide | Steven Zhang</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rhinovirus.css">
+  </head>
+  <body>
+    <header class="site-header shell">
+      <nav aria-label="Main navigation">
+        <a href="./">Home</a>
+        <a href="index.html#research">Research</a>
+        <a class="active" href="index.html#projects">Projects</a>
+        <a href="writing.html">Writing</a>
+      </nav>
+    </header>
+    <main class="shell virus-story">
+      <section class="story-intro">
+        <p class="eyebrow">Side project · Genomic surveillance · October 2026</p>
+        <h1>Same virus label.<br>Different genetic signals.</h1>
+        <p class="story-deck">What repeated rhinovirus detections can hide.</p>
+        <p>I analyzed public pooled-swab sequence data from Boston to ask a simple question:
+          when the same virus label appears in two samples, how similar are the genetic signals underneath?</p>
+        <p class="story-finding">Of 15 sample pairs with matching species labels, <strong>14 had different sets of finer genetic groups.</strong></p>
+        <p class="story-note">Same-week comparisons across different locations, using 19 files. Some files appear in more than one pair.</p>
+        <div class="project-links">
+          <a href="assets/rhinovirus/research_report.pdf">Read the full report (PDF) <span aria-hidden="true">↗</span></a>
+          <a href="https://data.securebio.org/zephyr/">Explore the source data <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="story-section" aria-labelledby="example-title">
+        <p class="section-kicker">One concrete example</p>
+        <h2 id="example-title">Same place. Same day. Still different.</h2>
+        <p>Two files collected at Downtown Crossing on August 14, 2026, each listed as a 50-swab pool,
+          both contained Rhinovirus A. A closer look supported different genetic reference groups:</p>
+        <div class="pool-comparison">
+          <article class="pool-card">
+            <p class="card-meta">One pooled-swab file</p>
+            <h3>Rhinovirus A</h3>
+            <p class="reference-label">A49 reference group</p>
+            <p><strong>942</strong> distinct matching sequences</p>
+          </article>
+          <article class="pool-card">
+            <p class="card-meta">The other pooled-swab file</p>
+            <h3>Rhinovirus A</h3>
+            <p class="reference-label">A1 reference group</p>
+            <p><strong>795</strong> distinct matching sequences</p>
+          </article>
+        </div>
+        <p>The broad label was the same, but it hid different genetic signals—even at the same place on the same day.</p>
+        <p class="story-note">Counts describe distinct sequence strings, not infected people or independent viral particles.
+          The group labels are provisional, and these files have not been verified as independent biological pools.</p>
+      </section>
+
+      <section id="map" class="story-section" aria-labelledby="map-title">
+        <p class="section-kicker">The geographic picture</p>
+        <h2 id="map-title">What does it mean for two places to share a virus?</h2>
+        <p>Using broad virus labels, <strong>15 pairs of locations</strong> had a detected label in common.
+          Looking more closely at their sequences, <strong>only 4 pairs</strong> shared a finer genetic group.</p>
+        <figure class="story-figure">
+          <a href="assets/rhinovirus/geographic-networks.png" aria-label="Open the Boston comparison maps at full resolution">
+            <img src="assets/rhinovirus/geographic-networks.png" width="3357" height="2231" loading="lazy" decoding="async"
+              alt="Two maps of nine Boston-area sampling locations. Broad species labels connect 15 location pairs; finer reference groups connect 4.">
+          </a>
+          <figcaption>Both maps use the same 26 eligible same-week sample comparisons. A line means at least one
+            comparison shared a detected label; connections can come from different weeks. Lines are not travel
+            routes or evidence of transmission. Missing lines do not establish biological absence. Nearby MBTA
+            stations approximate collection locations. Click the map to enlarge it.</figcaption>
+        </figure>
+      </section>
+
+      <section class="story-section" aria-labelledby="differences-title">
+        <p class="section-kicker">Looking beneath the labels</p>
+        <h2 id="differences-title">Most matching species lists hid a difference.</h2>
+        <p>Of the 15 sample pairs with exactly matching species lists, 12 had no finer groups in common,
+          two shared some groups but differed in others, and one had the same finer groups.</p>
+        <figure class="story-figure">
+          <img src="assets/rhinovirus/genetic-differences.png" width="3018" height="1411" loading="lazy" decoding="async"
+            alt="Of 15 sample pairs with identical species labels: 12 shared no finer groups, 2 shared some but differed, and 1 had identical finer groups.">
+          <figcaption>This chart counts sample pairs, not viruses or people. Unlike the maps, which allow any shared label,
+            this comparison requires the complete species lists to match. The pairs reuse 19 files and are not independent observations.</figcaption>
+        </figure>
+      </section>
+
+      <section class="story-section story-reading" aria-labelledby="meaning-title">
+        <p class="section-kicker">Why keep this detail?</p>
+        <h2 id="meaning-title">Different types can follow different geographic patterns.</h2>
+        <p>A Kenyan study found that rhinovirus type C22 appeared and disappeared at similar times across several
+          locations, while C38 was detected only in northern study locations. Calling both “Rhinovirus C” would hide
+          that distinction. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11041716/">Luka et al., 2023</a></p>
+        <p>That evidence motivated this project. Our Boston comparisons show how much genetic detail a species-only
+          summary can leave out. They do not yet show that our provisional reference groups identify separate
+          transmission chains or differences in illness severity.</p>
+        <p><strong>Repeated samples are still valuable.</strong> They can reinforce evidence that a virus is circulating.
+          Keeping genetic detail alongside detection counts helps describe what is being detected repeatedly.
+          This study did not identify a reliably better sampling location or justify reducing collection.</p>
+      </section>
+
+      <section class="story-section story-reading" aria-labelledby="methods-title">
+        <p class="section-kicker">How I checked</p>
+        <h2 id="methods-title">An exploratory analysis of 48 public files.</h2>
+        <p>I used 50,865 sampled reads from 48 Boston pooled-swab files collected during June–September 2026.
+          These are respiratory viral reads released by SecureBio, rather than complete raw sequencing data.</p>
+        <p>I matched reads to published VP1 sequences, a region used in rhinovirus classification, and required
+          stringent sequence matching and at least five distinct matching strings to support a reference group.
+          I then compared the resulting species lists and finer group lists between files.</p>
+        <p>Checks included stricter and looser matching rules, alternative references, and repeated comparisons
+          with equal numbers of reads. Locations were not sampled on identical dates, and collection effort varied.
+          These are descriptive results from a selected dataset, not a community prevalence estimate.</p>
+        <p class="story-note">AI-assisted research: Codex supported literature review, coding, analysis, figures,
+          checks and drafting. The linked report contains the methods, limitations and research-process record.</p>
+        <div class="project-links">
+          <a href="assets/rhinovirus/research_report.pdf">Read the methods and full results (PDF) <span aria-hidden="true">↗</span></a>
+          <a href="index.html#projects">Back to projects <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer shell">
+      <span>© 2026 Steven Zhang</span>
+      <span>Exploratory research · Boston pooled-swab data</span>
+    </footer>
+  </body>
+</html>

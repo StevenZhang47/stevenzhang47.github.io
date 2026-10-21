@@ -9,18 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20261021-2">
+    <link rel="stylesheet" href="styles.css?v=20261021-3">
   </head>
   <body>
     <header class="site-header">
       <nav class="top-nav shell" aria-label="Main navigation">
-        <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">SZ</span>Steven Zhang</a>
+        <span class="brand"><span class="brand-mark" aria-hidden="true">SZ</span>Steven Zhang</span>
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#research">Research</a>
           <a href="#projects">Projects</a>
           <a href="#teaching">Teaching</a>
-          <a href="writing.html">Writing</a>
+          <a href="writing.html?v=20261021-3">Writing</a>
         </div>
       </nav>
     </header>
@@ -55,9 +55,11 @@
       <section id="research" class="shell section-block rule-top" aria-labelledby="research-title">
         <h2 id="research-title" class="section-kicker">Research</h2>
         <article id="colloidal-crystals" class="entry visual-entry" aria-labelledby="crystals-title">
-          <a class="entry-visual" href="assets/colloidal-crystal-simulation.mp4" aria-label="Watch the colloidal-crystal simulation">
-            <img src="assets/colloidal-crystal-simulation.png" alt="Particles in a colloidal-crystal simulation" width="1120" height="840" loading="lazy" decoding="async">
-          </a>
+          <video id="crystal-preview" class="entry-visual" autoplay muted loop playsinline controls preload="metadata"
+            poster="assets/colloidal-crystal-simulation.png" width="1120" height="840" aria-label="Colloidal-crystal simulation preview">
+            <source src="assets/colloidal-crystal-simulation.mp4" type="video/mp4">
+            <a href="assets/colloidal-crystal-simulation.mp4">Watch the colloidal-crystal simulation.</a>
+          </video>
           <div class="entry-copy">
             <h3 id="crystals-title">Detecting and identifying colloidal crystals</h3>
             <p class="entry-meta">Hocky Group, NYU · Computational chemistry</p>
@@ -88,14 +90,14 @@
         <h2 class="section-kicker" id="projects-title">Selected projects</h2>
 
         <article id="rhinovirus" class="entry visual-entry" aria-labelledby="rhinovirus-title">
-          <a class="entry-visual" href="rhinovirus.html" aria-label="Explore Rhinovirus surveillance in Boston">
+          <a class="entry-visual" href="rhinovirus.html?v=20261021-3" aria-label="Explore Rhinovirus surveillance in Boston">
             <img src="assets/rhinovirus/geographic-networks.png" alt="Boston maps comparing shared virus labels" width="112" height="84" loading="lazy" decoding="async">
           </a>
           <div class="entry-copy">
-            <h3 id="rhinovirus-title"><a href="rhinovirus.html">Rhinovirus surveillance in Boston</a></h3>
+            <h3 id="rhinovirus-title"><a href="rhinovirus.html?v=20261021-3">Rhinovirus surveillance in Boston</a></h3>
             <p class="entry-meta">Genomic surveillance</p>
             <p>Exploring what broad virus labels hide in 48 public pooled-swab sequence files.</p>
-            <div class="project-links"><a href="rhinovirus.html">Visual story ↗</a></div>
+            <div class="project-links"><a href="rhinovirus.html?v=20261021-3">Visual story ↗</a></div>
             <details class="project-details">
               <summary>View analysis and figures</summary>
               <div class="project-detail-content">
@@ -112,12 +114,12 @@
                   <p class="evidence-note">Exploratory, AI-assisted analysis. Reference groups are provisional;
                     shared labels do not establish transmission or identify the best place to sample.</p>
                   <div class="project-links">
-                    <a href="rhinovirus.html">Explore the visual story <span aria-hidden="true">→</span></a>
+                    <a href="rhinovirus.html?v=20261021-3">Explore the visual story <span aria-hidden="true">→</span></a>
                     <a href="assets/rhinovirus/research_report.pdf">Read the report <span aria-hidden="true">↗</span></a>
                   </div>
                 </div>
                 <figure class="project-media">
-                  <a class="research-image-link" href="rhinovirus.html#map">
+                  <a class="research-image-link" href="rhinovirus.html?v=20261021-3#map">
                     <img src="assets/rhinovirus/geographic-networks.png" width="3357" height="2231" loading="lazy" decoding="async"
                       alt="Boston-area maps: 15 pairs of locations share broad species labels, while 4 share a finer reference group.">
                   </a>
@@ -129,9 +131,11 @@
         </article>
 
         <article class="entry visual-entry" aria-labelledby="tank-title">
-          <a class="entry-visual" href="https://github.com/StevenZhang47/tank-duel" aria-label="Explore Tank Duel">
-            <img src="assets/tank-duel-corner-poster-1x.png" alt="Two tank agents navigating a maze" width="112" height="84" loading="lazy" decoding="async">
-          </a>
+          <video id="tank-preview" class="entry-visual" autoplay muted loop playsinline controls preload="metadata"
+            poster="assets/tank-duel-corner-poster-1x.png" width="960" height="770" aria-label="Tank Duel match preview">
+            <source src="assets/tank-duel-corner-duel-1x.mp4" type="video/mp4">
+            <a href="assets/tank-duel-corner-duel-1x.mp4">Watch the Tank Duel recording.</a>
+          </video>
           <div class="entry-copy">
             <h3 id="tank-title"><a href="https://github.com/StevenZhang47/tank-duel">Tank Duel</a></h3>
             <p class="entry-meta">Reinforcement learning</p>
@@ -262,11 +266,11 @@
         <h2 class="section-kicker">Writing</h2>
         <p>I keep notes on ideas, papers, and questions that I want to return to.</p>
         <div class="closing-links">
-          <a href="writing.html">Thoughts &amp; writing</a>
+          <a href="writing.html?v=20261021-3">Thoughts &amp; writing</a>
         </div>
       </section>
 
     </main>
-    <script src="site.js?v=20261021-2" defer></script>
+    <script src="site.js?v=20261021-3" defer></script>
   </body>
 </html>

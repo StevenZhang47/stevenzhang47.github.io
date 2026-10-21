@@ -1,17 +1,20 @@
-// Silent project replays; native controls always let visitors pause them.
+// Play a demo only while it is visible and motion is allowed.
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 document.querySelectorAll('video[autoplay]').forEach((video) => {
   video.muted = true;
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const applyMotionPreference = () => {
-    video.autoplay = !reducedMotion.matches;
-    if (reducedMotion.matches) {
-      video.pause();
-    } else {
+  const disclosure = video.closest('details');
+  const updatePlayback = () => {
+    const shouldPlay = !reducedMotion.matches && (!disclosure || disclosure.open);
+    video.autoplay = shouldPlay;
+    if (shouldPlay) {
       video.play().catch(() => {
-        // Browser policies may require pressing the native play button.
+        // Native controls remain available if autoplay is blocked.
       });
+    } else {
+      video.pause();
     }
   };
-  applyMotionPreference();
-  reducedMotion.addEventListener('change', applyMotionPreference);
+  updatePlayback();
+  disclosure?.addEventListener('toggle', updatePlayback);
+  reducedMotion.addEventListener('change', updatePlayback);
 });

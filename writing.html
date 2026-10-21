@@ -6,18 +6,25 @@
     <meta name="description" content="Things Steven Zhang has thought about and wants to write about.">
     <title>Writing | Steven Zhang</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main>
-      <header class="site-header shell">
-        <nav aria-label="Main navigation">
-          <a href="index.html">Home</a>
+    <header class="site-header">
+      <nav class="top-nav shell" aria-label="Main navigation">
+        <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">SZ</span>Steven Zhang</a>
+        <div class="nav-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#research">Research</a>
           <a href="index.html#projects">Projects</a>
           <a href="index.html#teaching">Teaching</a>
-          <a class="active" href="writing.html">Writing</a>
-        </nav>
-      </header>
+          <a href="writing.html" aria-current="page">Writing</a>
+        </div>
+      </nav>
+    </header>
+    <main>
 
       <section class="simple-page shell">
         <h1>Things I’ve thought about and want to write about.</h1>
@@ -28,10 +35,6 @@
         </ol>
       </section>
 
-      <footer class="site-footer shell">
-        <span>© 2026 Steven Zhang</span>
-        <span>Built with curiosity in New Haven.</span>
-      </footer>
     </main>
   </body>
 </html>

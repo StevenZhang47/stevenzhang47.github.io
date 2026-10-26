@@ -88,6 +88,52 @@
       <section id="projects" class="shell section-block rule-top featured-projects" aria-labelledby="projects-title">
         <h2 class="section-kicker" id="projects-title">Selected projects</h2>
 
+        <article class="entry visual-entry" aria-labelledby="tank-title">
+          <video id="tank-preview" class="entry-visual" autoplay muted loop playsinline controls preload="metadata"
+            poster="assets/tank-duel-corner-poster-1x.png" width="960" height="770" aria-label="Tank Duel match preview">
+            <source src="assets/tank-duel-corner-duel-1x.mp4" type="video/mp4">
+            <a href="assets/tank-duel-corner-duel-1x.mp4">Watch the Tank Duel recording.</a>
+          </video>
+          <div class="entry-copy">
+            <h3 id="tank-title"><a href="https://github.com/StevenZhang47/tank-duel">Reinforcement Learning Tank Duel</a></h3>
+            <p class="entry-meta">Reinforcement learning · PPO</p>
+            <p>A reinforcement learning agent that learns to navigate, aim, dodge, and fire around ricocheting bullets.</p>
+            <div class="project-links"><a href="https://github.com/StevenZhang47/tank-duel">Code ↗</a></div>
+            <details class="project-details">
+              <summary>View demo and results</summary>
+              <div class="project-detail-content">
+                <div class="feature-copy">
+                  <p class="card-meta">Reinforcement learning</p>
+                  <h4>Learning to fight.<br>Learning to survive.</h4>
+                  <p class="project-name">Reinforcement Learning Tank Duel</p>
+                  <p>I built a tank-combat environment and trained a neural agent to navigate, aim,
+                    dodge, and fire around ricocheting bullets. Demonstrations initialize the policy;
+                    PPO refines it, with physics-based safety masks to reduce self-hits.</p>
+                  <p>The green tank is the latest selected agent, facing an earlier trained agent in a maze.
+                    This is a recorded match, played at normal speed (1×).</p>
+                  <dl class="project-stats">
+                    <div><dt>74.7%</dt><dd>Wins against hard shooters<br>224 of 300 test games</dd></div>
+                    <div><dt>0 / 1,600</dt><dd>Observed self-hits<br>Across the final test suites</dd></div>
+                  </dl>
+                  <p class="evidence-note">Fixed-map benchmarks against scripted and frozen neural opponents; not a human win rate or a guarantee of safety.</p>
+                  <div class="project-links">
+                    <a href="https://github.com/StevenZhang47/tank-duel" target="_blank" rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+                <figure class="project-media tank-media">
+                  <video id="tank-demo" autoplay muted loop playsinline controls preload="metadata"
+                    poster="assets/tank-duel-corner-poster-1x.png" width="960" height="770" aria-describedby="tank-caption">
+                    <source src="assets/tank-duel-corner-duel-1x.mp4" type="video/mp4">
+                    Your browser does not support embedded video. <a href="assets/tank-duel-corner-duel-1x.mp4">Watch the Tank Duel recording.</a>
+                  </video>
+                  <figcaption id="tank-caption"><span class="status-dot" aria-hidden="true"></span>Green: trained agent · Red: earlier trained agent · Silent, looping replay</figcaption>
+                  <p class="media-description">Starting on opposite sides of a wall, both agents move toward an opening and exchange fire. Each fires three shots; green wins without a self-hit. Use the video controls to pause or replay.</p>
+                </figure>
+              </div>
+            </details>
+          </div>
+        </article>
+
         <article id="rhinovirus" class="entry visual-entry" aria-labelledby="rhinovirus-title">
           <a class="entry-visual" href="rhinovirus.html?v=20261021-4" aria-label="Explore Rhinovirus surveillance in Boston">
             <img src="assets/rhinovirus/geographic-networks.png" alt="Boston maps comparing shared virus labels" width="112" height="84" loading="lazy" decoding="async">
@@ -129,68 +175,22 @@
           </div>
         </article>
 
-        <article class="entry visual-entry" aria-labelledby="tank-title">
-          <video id="tank-preview" class="entry-visual" autoplay muted loop playsinline controls preload="metadata"
-            poster="assets/tank-duel-corner-poster-1x.png" width="960" height="770" aria-label="Tank Duel match preview">
-            <source src="assets/tank-duel-corner-duel-1x.mp4" type="video/mp4">
-            <a href="assets/tank-duel-corner-duel-1x.mp4">Watch the Tank Duel recording.</a>
-          </video>
-          <div class="entry-copy">
-            <h3 id="tank-title"><a href="https://github.com/StevenZhang47/tank-duel">Tank Duel</a></h3>
-            <p class="entry-meta">Reinforcement learning</p>
-            <p>A neural agent that learns to navigate, aim, dodge, and fire around ricocheting bullets.</p>
-            <div class="project-links"><a href="https://github.com/StevenZhang47/tank-duel">Code ↗</a></div>
-            <details class="project-details">
-              <summary>View demo and results</summary>
-              <div class="project-detail-content">
-                <div class="feature-copy">
-                  <p class="card-meta">Reinforcement learning</p>
-                  <h4>Learning to fight.<br>Learning to survive.</h4>
-                  <p class="project-name">Tank Duel</p>
-                  <p>I built a tank-combat environment and trained a neural agent to navigate, aim,
-                    dodge, and fire around ricocheting bullets. Demonstrations initialize the policy;
-                    PPO refines it, with physics-based safety masks to reduce self-hits.</p>
-                  <p>The green tank is the latest selected agent, facing an earlier trained agent in a maze.
-                    This is a recorded match, played at normal speed (1×).</p>
-                  <dl class="project-stats">
-                    <div><dt>74.7%</dt><dd>Wins against hard shooters<br>224 of 300 test games</dd></div>
-                    <div><dt>0 / 1,600</dt><dd>Observed self-hits<br>Across the final test suites</dd></div>
-                  </dl>
-                  <p class="evidence-note">Fixed-map benchmarks against scripted and frozen neural opponents; not a human win rate or a guarantee of safety.</p>
-                  <div class="project-links">
-                    <a href="https://github.com/StevenZhang47/tank-duel" target="_blank" rel="noreferrer">Explore the project <span aria-hidden="true">↗</span></a>
-                  </div>
-                </div>
-                <figure class="project-media tank-media">
-                  <video id="tank-demo" autoplay muted loop playsinline controls preload="metadata"
-                    poster="assets/tank-duel-corner-poster-1x.png" width="960" height="770" aria-describedby="tank-caption">
-                    <source src="assets/tank-duel-corner-duel-1x.mp4" type="video/mp4">
-                    Your browser does not support embedded video. <a href="assets/tank-duel-corner-duel-1x.mp4">Watch the Tank Duel recording.</a>
-                  </video>
-                  <figcaption id="tank-caption"><span class="status-dot" aria-hidden="true"></span>Green: trained agent · Red: earlier trained agent · Silent, looping replay</figcaption>
-                  <p class="media-description">Starting on opposite sides of a wall, both agents move toward an opening and exchange fire. Each fires three shots; green wins without a self-hit. Use the video controls to pause or replay.</p>
-                </figure>
-              </div>
-            </details>
-          </div>
-        </article>
-
         <article class="entry visual-entry" aria-labelledby="finetuning-title">
-          <a class="entry-visual" href="https://github.com/StevenZhang47/FineTuning" aria-label="Explore BioMedCLIP × BloodMNIST">
+          <a class="entry-visual" href="https://github.com/StevenZhang47/FineTuning" aria-label="Explore BioMedCLIP fine-tuning on BloodMNIST">
             <img src="assets/bloodmnist-examples.png" alt="Examples from eight blood-cell classes" width="112" height="84" loading="lazy" decoding="async">
           </a>
           <div class="entry-copy">
-            <h3 id="finetuning-title"><a href="https://github.com/StevenZhang47/FineTuning">BioMedCLIP × BloodMNIST</a></h3>
-            <p class="entry-meta">Computer vision · Transfer learning</p>
-            <p>Comparing frozen embeddings and partial fine-tuning for eight blood-cell classes.</p>
+            <h3 id="finetuning-title"><a href="https://github.com/StevenZhang47/FineTuning">Fine-tuning BioMedCLIP on BloodMNIST</a></h3>
+            <p class="entry-meta">Computer vision · Fine-tuning · Transfer learning</p>
+            <p>Comparing frozen BioMedCLIP embeddings with partial fine-tuning for eight blood-cell classes.</p>
             <div class="project-links"><a href="https://github.com/StevenZhang47/FineTuning">Experiment ↗</a></div>
             <details class="project-details">
               <summary>View comparison and results</summary>
               <div class="project-detail-content">
                 <div class="feature-copy">
-                  <p class="card-meta">Computer vision · Transfer learning</p>
+                  <p class="card-meta">Computer vision · Fine-tuning · Transfer learning</p>
                   <h4>Teaching a foundation model to recognize blood cells.</h4>
-                  <p class="project-name">BioMedCLIP × BloodMNIST</p>
+                  <p class="project-name">Fine-tuning BioMedCLIP on BloodMNIST</p>
                   <p>I compared zero-shot predictions, a classifier trained on frozen image embeddings,
                     and partial fine-tuning of BioMedCLIP. Updating the final visual transformer block,
                     normalization, projection, and classifier improved performance on eight blood-cell classes.</p>

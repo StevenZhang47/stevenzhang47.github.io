@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Steven Zhang is a Yale undergraduate working across computational chemistry, biology, applied mathematics, and machine learning.">
+    <meta name="description" content="Steven Zhang is a Yale undergraduate studying Computer Science, Mathematics, and Molecular Biophysics &amp; Biochemistry, with interests in machine learning, computational chemistry, and computational biology.">
     <title>Steven Zhang | Research &amp; Work</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
           <h1 id="page-title">Steven Zhang</h1>
           <p>
             I’m a rising junior at <a href="https://www.yale.edu/" target="_blank" rel="noreferrer">Yale University</a>
-            studying Molecular Biophysics &amp; Biochemistry.
+            studying Computer Science, Mathematics, and Molecular Biophysics &amp; Biochemistry.
             I’m interested in machine learning, computational chemistry, and computational biology.
           </p>
           <p>
@@ -128,6 +128,45 @@
                   </video>
                   <figcaption id="tank-caption"><span class="status-dot" aria-hidden="true"></span>Green: trained agent · Red: earlier trained agent · Silent, looping replay</figcaption>
                   <p class="media-description">Starting on opposite sides of a wall, both agents move toward an opening and exchange fire. Each fires three shots; green wins without a self-hit. Use the video controls to pause or replay.</p>
+                </figure>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article id="molecule-studio" class="entry visual-entry" aria-labelledby="molecule-title">
+          <video id="molecule-preview" class="entry-visual" autoplay muted loop playsinline controls preload="metadata"
+            poster="assets/molecule-studio-poster.png" width="960" height="640" aria-label="Molecule Studio: rotating a 3D molecule and visualizing resonance">
+            <source src="assets/molecule-studio-demo.mp4" type="video/mp4">
+            <a href="assets/molecule-studio-demo.mp4">Watch the Molecule Studio demonstration.</a>
+          </video>
+          <div class="entry-copy">
+            <h3 id="molecule-title">Molecule Studio: Visualizing Organic Chemistry</h3>
+            <p class="entry-meta">Chemistry education · Interactive 3D visualization</p>
+            <p>Turning molecular drawings into 3D structures students can rotate, inspect, and use to follow electron-pair moves.</p>
+            <div class="project-links"><a href="assets/molecule-studio-demo.mp4">Watch demo ↗</a></div>
+            <details class="project-details">
+              <summary>Explore the visualization</summary>
+              <div class="project-detail-content">
+                <div class="feature-copy">
+                  <p class="card-meta">Molecule Studio · Teaching tool in development</p>
+                  <h4>Draw a molecule. See the chemistry.</h4>
+                  <p>I built a browser-based workspace that connects 2D molecular drawings with
+                    calculated 3D shapes, orbital illustrations, and animated resonance contributors.
+                    Students can rotate the molecule while following the same atoms and bonds in both views.</p>
+                  <p>The app also recognizes printed structures for review and includes a step-by-step
+                    hydroboration–oxidation lesson explaining electron donors, acceptors, and changing bonds.</p>
+                  <p class="evidence-note">The demo is a screen recording of the working app. Orbital lobes and electron-pair
+                    paths are teaching illustrations, not calculated electron-density surfaces or physical electron trajectories.</p>
+                </div>
+                <figure class="project-media">
+                  <video id="molecule-demo" autoplay muted loop playsinline controls preload="metadata"
+                    poster="assets/molecule-studio-poster.png" width="960" height="640" aria-describedby="molecule-caption">
+                    <source src="assets/molecule-studio-demo.mp4" type="video/mp4">
+                    <a href="assets/molecule-studio-demo.mp4">Watch the Molecule Studio demonstration.</a>
+                  </video>
+                  <figcaption id="molecule-caption"><span class="status-dot" aria-hidden="true"></span>Rotate the structure · Explore orbitals · Follow resonance electron pairs</figcaption>
+                  <p class="media-description">A silent recording from Molecule Studio. Use the video controls to pause, replay, or view full screen.</p>
                 </figure>
               </div>
             </details>

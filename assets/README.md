@@ -1,5 +1,13 @@
 # Project media provenance
 
+- `molecule-studio-demo.mp4` and `molecule-studio-poster.png`: captured from
+  the working Molecule Studio benzene viewer. The recording uses the app's
+  actual 3D renderer, pointer-driven rotation, orbital display, and resonance
+  animation. Silent H.264 MP4, 960×640, approximately 17.8 seconds; the poster
+  uses the same dimensions. Pointer gestures were scripted for the recording; this is an app
+  demonstration, not footage of Steven or a live interactive embed. Orbital
+  lobes and electron-pair paths are schematic teaching illustrations, not
+  calculated electron-density surfaces or physical electron trajectories.
 - `tank-duel-corner-duel-1x.mp4`: genuine seeded maze match recorded from the
   latest `models/play_agent.zip` (forecast206) against
   `models/play_agent_before_dodging_20261009.zip`. Source:

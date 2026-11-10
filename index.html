@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=20261021-4">
-    <link rel="stylesheet" href="protein.css?v=20261110-1">
+    <link rel="stylesheet" href="protein.css?v=20261110-2">
   </head>
   <body>
     <header class="site-header">
@@ -47,21 +47,21 @@
             <a href="https://www.linkedin.com/in/steven-zhang-5aab5a145/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           </div>
         </div>
-        <figure class="portrait-frame">
-          <img src="profile.png" alt="Steven Zhang" width="180" height="180">
-        </figure>
-      </section>
-
-      <figure id="protein" class="protein-feature shell" aria-labelledby="protein-caption">
-        <div class="protein-labels" aria-hidden="true"><span>01 / Computation</span><span>02 / Biology</span></div>
-        <div id="protein-stage" class="protein-stage">
-          <p class="protein-fallback">A protein, in bits and ribbons.<br><a href="https://www.rcsb.org/structure/6GJ8">Explore the KRAS structure ↗</a></p>
+        <div class="intro-visuals">
+          <figure class="portrait-frame">
+            <img src="profile.png" alt="Steven Zhang" width="180" height="180">
+          </figure>
+          <figure id="protein" class="protein-feature" aria-labelledby="protein-caption">
+            <div id="protein-stage" class="protein-stage">
+              <p class="protein-fallback">A protein, in bits and ribbons.<br><a href="https://www.rcsb.org/structure/6GJ8">Explore KRAS ↗</a></p>
+            </div>
+            <figcaption id="protein-caption" class="protein-caption">
+              <span>KRAS · <a href="https://www.rcsb.org/structure/6GJ8">PDB 6GJ8</a><span class="protein-credit"><a href="https://github.com/mitsenkov/ascii-fold" title="ASCII Fold by Maxim Tsenkov">ASCII Fold ↗</a></span></span>
+              <button id="protein-motion" type="button" hidden>Pause rotation</button>
+            </figcaption>
+          </figure>
         </div>
-        <figcaption id="protein-caption" class="protein-caption">
-          <span>KRAS · <a href="https://www.rcsb.org/structure/6GJ8">PDB 6GJ8</a><span class="protein-credit"> · <a href="https://github.com/mitsenkov/ascii-fold">ASCII Fold by Maxim Tsenkov</a></span></span>
-          <button id="protein-motion" type="button" hidden>Pause rotation</button>
-        </figcaption>
-      </figure>
+      </section>
 
       <section id="research" class="shell section-block rule-top" aria-labelledby="research-title">
         <h2 id="research-title" class="section-kicker">Research</h2>
@@ -294,6 +294,6 @@
 
     </main>
     <script src="site.js?v=20261021-4" defer></script>
-    <script type="module" src="protein.js?v=20261110-1"></script>
+    <script type="module" src="protein.js?v=20261110-2"></script>
   </body>
 </html>

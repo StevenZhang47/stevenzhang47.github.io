@@ -1,14 +1,13 @@
-.protein-feature { margin-block: 36px 0; }
-.protein-labels, .protein-caption { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--quiet); font-size: 10px; }
-.protein-labels { padding-top: 16px; border-top: 1px solid var(--line); letter-spacing: .06em; }
-.protein-stage { position: relative; height: clamp(240px, 46vw, 340px); }
+.intro-visuals { display: grid; gap: 12px; width: 180px; padding-top: 32px; align-self: start; }
+.protein-feature { width: 100%; min-width: 0; margin: 0; }
+.protein-stage { position: relative; height: 180px; }
 .protein-fallback { position: absolute; inset: 0; display: grid; align-content: center; text-align: center; color: var(--muted); font-size: 12px; }
 .protein-stage.is-ready > .protein-fallback { display: none; }
-.protein-caption { align-items: baseline; flex-wrap: wrap; line-height: 1.8; }
+.protein-caption { display: flex; flex-direction: column; align-items: center; gap: 3px; color: var(--quiet); font-size: 10px; line-height: 1.8; text-align: center; }
+.protein-credit { display: block; }
 .protein-caption a { color: inherit; }
 .protein-caption button { flex: 0 0 auto; padding: 5px 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--accent); font: inherit; cursor: pointer; }
 .protein-caption button:hover { color: var(--rust); border-color: currentColor; }
-@media (max-width: 420px) {
-  .protein-credit { display: block; }
-  .protein-caption { gap: 6px; }
+@media (max-width: 700px) {
+  .intro-visuals { grid-row: 1; margin-inline: auto; padding-top: 0; }
 }

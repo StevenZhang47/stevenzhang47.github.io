@@ -16,7 +16,7 @@ if (stage && motionButton) {
       seam: 'soft',
       blendFrom: 0.38,
       blendTo: 0.62,
-      detail: 52,
+      detail: 32,
       spin: 0,
       interactive: false,
       background: false,
